@@ -1,0 +1,5 @@
+.btn-custom {background-color:#B67352;color:#fff;}
+.btn-custom:hover {background-color:#5E3C58;color:#fff;}
+.btn-floating {position:fixed;bottom:20px;right:20px;background-color:#D4AF37;
+border-radius:50%;width:60px;height:60px;font-size:1.5rem;box-shadow:0 4px 6px rgba(0,0,0,0.2);}
+.card img {height:200px;object-fit:cover;}

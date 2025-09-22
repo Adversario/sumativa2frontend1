@@ -1,0 +1,10 @@
+[
+{"id":"p-001","nombre":"Alfombra Persa Antigua","precio":59990,"categoria":"Tesoros & Reliquias","imagen":"assets/img/alfombra.jpg","descripcion":"Una pieza tejida a mano con siglos de historia."},
+{"id":"p-002","nombre":"Túnica de Seda Azul","precio":34990,"categoria":"Ropajes de Seda","imagen":"assets/img/tunica.jpg","descripcion":"Ligera, elegante y digna de caravanas reales."},
+{"id":"p-003","nombre":"Esencia de Sándalo","precio":12990,"categoria":"Especias & Fragancias","imagen":"assets/img/sandalo.jpg","descripcion":"Fragancia cálida y envolvente."},
+{"id":"p-004","nombre":"Astrolabio de Bronce","precio":45990,"categoria":"Artilugios & Ingenios","imagen":"assets/img/astrolabio.jpg","descripcion":"Instrumento antiguo para guiar navegantes."},
+{"id":"p-005","nombre":"Collar de Jade Oriental","precio":24990,"categoria":"Tesoros & Reliquias","imagen":"assets/img/collar.jpg","descripcion":"Adorno fino con piedras de la ruta de la seda."},
+{"id":"p-006","nombre":"Manto de Seda Carmesí","precio":39990,"categoria":"Ropajes de Seda","imagen":"assets/img/manto.jpg","descripcion":"Tejido suave y de intenso color carmesí."},
+{"id":"p-007","nombre":"Perfume de Rosa Damascena","precio":17990,"categoria":"Especias & Fragancias","imagen":"assets/img/rosa.jpg","descripcion":"Aroma floral refinado, de jardines lejanos."},
+{"id":"p-008","nombre":"Caja de Engranajes","precio":32990,"categoria":"Artilugios & Ingenios","imagen":"assets/img/engranajes.jpg","descripcion":"Mecanismo curioso para mentes ingeniosas."}
+]

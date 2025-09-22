@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon's Bazar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5E3C58;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Simon's Bazar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#tesoros">Tesoros &amp; Reliquias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ropajes">Ropajes de Seda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#especias">Especias &amp; Fragancias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#artilugios">Artilugios &amp; Ingenios</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="py-4 container">
+    <form id="form-busqueda" class="d-flex" role="search">
+      <input id="input-busqueda" class="form-control me-2" type="search" placeholder="Buscar en el bazar..." aria-label="Buscar">
+      <button class="btn btn-custom" type="submit">Buscar</button>
+    </form>
+  </section>
+  <main class="container">
+    <div id="contenedor-productos" class="row g-4"></div>
+    <div id="mensaje-error" class="alert alert-warning mt-4 d-none" role="alert"></div>
+  </main>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul id="lista-carrito" class="list-group mb-3"></ul>
+      <p id="resumen-carrito" class="fw-bold"></p>
+    </div>
+  </div>
+  <button class="btn btn-floating" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+    🛒 <span id="contador-carrito" class="badge bg-danger">0</span>
+  </button>
+  <footer class="text-center py-3 mt-5" style="background-color: #B67352; color: white;">
+    Simon's Bazar – Donde cada caravana trae nuevos tesoros.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
