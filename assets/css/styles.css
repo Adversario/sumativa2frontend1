@@ -1,5 +1,23 @@
-.btn-custom {background-color:#B67352;color:#fff;}
-.btn-custom:hover {background-color:#5E3C58;color:#fff;}
-.btn-floating {position:fixed;bottom:20px;right:20px;background-color:#D4AF37;
-border-radius:50%;width:60px;height:60px;font-size:1.5rem;box-shadow:0 4px 6px rgba(0,0,0,0.2);}
-.card img {height:200px;object-fit:cover;}
+/* Botones y colores de marca */
+.btn-custom { background-color:#B67352; color:#fff; }
+.btn-custom:hover { background-color:#5E3C58; color:#fff; }
+
+/* Boton flotante carrito */
+.btn-floating {
+  position: fixed; bottom: 20px; right: 20px;
+  background-color:#D4AF37; border-radius:50%;
+  width:60px; height:60px; font-size:1.5rem;
+  box-shadow:0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Imágenes de cards: encaje consistente */
+.card img { height:200px; object-fit:cover; }
+
+/* Pequeño realce para link activo del navbar */
+.navbar .nav-link.active { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Ajuste responsivo de imagen */
+@media (min-width:576px) { .card img { height:200px; } }
+@media (min-width:768px) { .card img { height:220px; } }
+@media (min-width:992px) { .card img { height:240px; } }
+@media (min-width:1200px){ .card img { height:260px; } }

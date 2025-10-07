@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simon's Bazar</title>
+
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos propios -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5E3C58;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#5E3C58;">
     <div class="container-fluid">
       <a class="navbar-brand fw-bold" href="#">Simon's Bazar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#tesoros">Tesoros &amp; Reliquias</a></li>
-          <li class="nav-item"><a class="nav-link" href="#ropajes">Ropajes de Seda</a></li>
-          <li class="nav-item"><a class="nav-link" href="#especias">Especias &amp; Fragancias</a></li>
-          <li class="nav-item"><a class="nav-link" href="#artilugios">Artilugios &amp; Ingenios</a></li>
+          <!-- Agregamos data-cat para filtrar por categoría -->
+          <li class="nav-item"><a class="nav-link nav-cat" href="#tesoros"    data-cat="Tesoros &amp; Reliquias">Tesoros &amp; Reliquias</a></li>
+          <li class="nav-item"><a class="nav-link nav-cat" href="#ropajes"    data-cat="Ropajes de Seda">Ropajes de Seda</a></li>
+          <li class="nav-item"><a class="nav-link nav-cat" href="#especias"   data-cat="Especias &amp; Fragancias">Especias &amp; Fragancias</a></li>
+          <li class="nav-item"><a class="nav-link nav-cat" href="#artilugios" data-cat="Artilugios &amp; Ingenios">Artilugios &amp; Ingenios</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Búsqueda -->
   <section class="py-4 container">
     <form id="form-busqueda" class="d-flex" role="search">
       <input id="input-busqueda" class="form-control me-2" type="search" placeholder="Buscar en el bazar..." aria-label="Buscar">
       <button class="btn btn-custom" type="submit">Buscar</button>
     </form>
+    <!-- Contador de resultados -->
+    <p id="contador-resultados" class="text-muted small mt-2" aria-live="polite"></p>
   </section>
+
+  <!-- Productos -->
   <main class="container">
-    <div id="contenedor-productos" class="row g-4"></div>
+    <div id="contenedor-productos" class="row g-4" aria-live="polite"></div>
+
+    <!-- Mensajes -->
     <div id="mensaje-error" class="alert alert-warning mt-4 d-none" role="alert"></div>
+    <div id="mensaje-sin-resultados" class="alert alert-info mt-4 d-none" role="status"></div>
   </main>
+
+  <!-- Carrito (offcanvas) -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Carrito</h5>
@@ -42,15 +59,23 @@
     <div class="offcanvas-body">
       <ul id="lista-carrito" class="list-group mb-3"></ul>
       <p id="resumen-carrito" class="fw-bold"></p>
+      <button id="btn-vaciar" class="btn btn-outline-danger w-100 d-none">Vaciar carrito</button>
     </div>
   </div>
-  <button class="btn btn-floating" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+
+  <!-- Botón flotante carrito -->
+  <button class="btn btn-floating" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito" aria-label="Abrir carrito">
     🛒 <span id="contador-carrito" class="badge bg-danger">0</span>
   </button>
-  <footer class="text-center py-3 mt-5" style="background-color: #B67352; color: white;">
+
+  <!-- Footer -->
+  <footer class="text-center py-3 mt-5" style="background-color:#B67352;color:#fff;">
     Simon's Bazar – Donde cada caravana trae nuevos tesoros.
   </footer>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- App -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>
